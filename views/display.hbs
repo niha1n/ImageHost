@@ -1,0 +1,24 @@
+
+
+{{#each list}}
+
+   <div class="container">
+       <div class="row py-3 d-flex">
+                <div class="col-md "> 
+                     <div class="card bg-dark text-light ms-auto w-50 p-3">
+                         <img src="https://image-host-1.s3.ap-south-1.amazonaws.com/{{this}}" >
+                         <p class="card-text">
+                            Image
+                        </p>
+                        <div class="d-flex">
+                        <textarea id="content" style="display:none"> https://image-host-1.s3.ap-south-1.amazonaws.com/{{this}}</textarea>
+                        <button class="btn btn-primary w-50 my-1 mx-1"  onclick= "location.href='/display/delete/{{this}}'" type="button">Delete</button>
+                        <button class="btn btn-primary w-50 my-1 mx-1" onclick="copyToClipboard()">URL</button>
+                        </div>
+                    </div>
+                </div>
+       </div>
+   </div> 
+{{/each}}     
+
+
